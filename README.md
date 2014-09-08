@@ -9,4 +9,9 @@ As a new user of Mount Sinai's Minerva high performance computying (HPC) system 
 As many other toosl, fastq is a module in Minerva and using it requires loading it:
 
   > module load fastqc/0.10.1
-  
+
+This has to be done in every Minerva session so you better add the command above to your scripts!
+
+In general, modules in Minerva can be searched with:
+
+  > module avail
