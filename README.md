@@ -5,3 +5,8 @@ As a new user of Mount Sinai's Minerva high performance computying (HPC) system 
 
 
 ## fastqc
+
+As many other toosl, fastq is a module in Minerva and using it requires loading it:
+
+  > module load fastqc/0.10.1
+  
