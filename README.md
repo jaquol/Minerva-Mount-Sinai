@@ -17,7 +17,7 @@ In general, modules in Minerva can be searched with:
 
 > module avail
 
-### Performance
+####### Performance
 
 | Size input FASTQ file  | 50 MB  | 9000 MB  |
 |---|--:|--:|
