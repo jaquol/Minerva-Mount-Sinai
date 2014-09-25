@@ -19,4 +19,6 @@ In general, modules in Minerva can be searched with:
 
 ## trimmomatic
 
-As of Sep 25th 2014 the trimmomatic tool (http://www.usadellab.org/cms/?page=trimmomatic) is not installed in Minerva. It can be used though jus
+As of Sep 25th 2014 the trimmomatic tool (http://www.usadellab.org/cms/?page=trimmomatic) is not installed in Minerva. It can be used though just loading java:
+
+> module load java/1.7.0_60
