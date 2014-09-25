@@ -3,6 +3,7 @@ Minerva-Mount-Sinai
 
 As a new user of Mount Sinai's Minerva high performance computying (HPC) system (https://hpc.mssm.edu/), it is taking me some time to learn basic (and not so basic) commands of its LSF (Load Sharing Facility) queueing system to schedule jobs. The aim of this README file is that such learning can be re-used by other users, although many know-how items described here may be extensively documented somewhere else...
 
+<br>
 
 
 ## fastqc
@@ -26,6 +27,7 @@ In general, modules in Minerva can be searched with:
 | Max. memory (MB) | 168  | 287  |
 | Memory unit (MB size / MB computing) | 0.29  | 31.36  |  
 
+<br>
 
 
 ## trimmomatic
