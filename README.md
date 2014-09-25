@@ -17,14 +17,15 @@ In general, modules in Minerva can be searched with:
 
 > module avail
 
-####### Performance
+###### Performance
 
 | Size input FASTQ file  | 50 MB  | 9000 MB  |
 |---|--:|--:|
 | CPU time (s) | 12  | 1770  |
 | Speed (MB/s) | 4  | 5  |
 | Max. memory (MB) | 168  | 287  |
-| Memory unit (MB size / MB computing) | 0.29  | 31.36  |
+| Memory unit (MB size / MB computing) | 0.29  | 31.36  |  
+
 
 
 ## trimmomatic
@@ -45,7 +46,7 @@ To call trimmomatic:
 
 It is good to require 5 Gb (-Xmx5g) or trimmomatic may fail to open
 
-### Performance
+###### Performance
 
 | Size input FASTQ file  | 50 MB  | 9000 MB  |
 |---|--:|--:|
