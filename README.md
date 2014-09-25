@@ -15,3 +15,8 @@ This has to be done in every Minerva session so you better add the command above
 In general, modules in Minerva can be searched with:
 
   > module avail
+
+
+## trimmomatic
+
+As of Sep 25th 2014 the trimmomatic tool (http://www.usadellab.org/cms/?page=trimmomatic) is not installed in Minerva. It can be used though jus
