@@ -4,6 +4,7 @@ Minerva-Mount-Sinai
 As a new user of Mount Sinai's Minerva high performance computying (HPC) system (https://hpc.mssm.edu/), it is taking me some time to learn basic (and not so basic) commands of its LSF (Load Sharing Facility) queueing system to schedule jobs. The aim of this README file is that such learning can be re-used by other users, although many know-how items described here may be extensively documented somewhere else...
 
 
+
 ## fastqc
 
 As many other toosl, fastq is a module in Minerva and using it requires loading it:
@@ -15,6 +16,15 @@ This has to be done in every Minerva session so you better add the command above
 In general, modules in Minerva can be searched with:
 
 > module avail
+
+### Performance
+
+| Size input FASTQ file  | 50 MB  | 9000 MB  |
+|---|--:|--:|
+| CPU time (s) | 12  | 1770  |
+| Speed (MB/s) | 4  | 5  |
+| Max. memory (MB) | 168  | 287  |
+| Memory unit (MB size / MB computing) | 0.29  | 31.36  |
 
 
 ## trimmomatic
@@ -33,10 +43,21 @@ To call trimmomatic:
 
 > java -Xmx5g -jar $trimmomatic SE -phred33 <input_file> <output_file> ILLUMINACLIP:<fasta_with_overrepresented_seqs>:1:30:15 MINLEN:36
 
-Additional comments:
-* It is good to require 5 Gb (-Xmx5g) or trimmomatic may fail to open
-* For these specific trimmomatic options, and using two input files of 50 Mb (small) and 9 Gb (rather big) for testing purposes, I noticed that:
+It is good to require 5 Gb (-Xmx5g) or trimmomatic may fail to open
+
+### Performance
+
+| Size input FASTQ file  | 50 MB  | 9000 MB  |
+|---|--:|--:|
+| CPU time (s) | 75  | 13696  |
+| Speed (MB/s) | 0.67  | 0.66  |
+| Max. memory (MB) | 1772  | 3103  |
+| Memory unit (MB computing / MB size) | 35  | 0.4  |
+
+Therefore, for these specific trimmomatic options:
   * Maximum memory (important when requesting memory resources in Minerva) does not increases with the size of input file
   * Requesting ~5 Gb of computing memory should be OK for most input FASTQ files
   * The computing time relative to the size of the input file seems to be constant
   * Requesting ~5 hours of walltime should be OK for most input FASTQ files (the job for the 9 Gb file completed in ~4 hours)
+ 
+
