@@ -6,9 +6,14 @@ As a new user of Mount Sinai's Minerva high performance computying (HPC) system 
 <br>
 
 
+## Hard references *versus* loading modules
+
+I recently recycled a script to use the 
+
+
 ## fastqc
 
-As many other toosl, fastq is a module in Minerva and using it requires loading it:
+As many other tool, fastq is a module in Minerva and using it requires loading it:
 
 > module load fastqc/0.10.1
 
