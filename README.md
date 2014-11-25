@@ -20,6 +20,8 @@ The best solution I found is using including the parameter --genomeLoad NoShared
 
 If you read the STAR manual you will see that NoSharedMemory is the default option of the --genomeLoad parameter. Well, we sort found that this is not how STAR behaves, at least in the STAR version installed in Minerva, so better include --genomeLoad NoSharedMemory in your scripts! 
 
+PS: and once you get too many shared memory segments, it is useful just to contact hpchelp@mssm.edu so that they can clear the nodes for you...
+
 <br>
 
 
