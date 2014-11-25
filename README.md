@@ -6,9 +6,19 @@ As a new user of Mount Sinai's Minerva high performance computying (HPC) system 
 <br>
 
 
-## Hard references *versus* loading modules
+## STAR aligner
 
-I recently recycled a script to use the 
+In the mapping process, STAR loads into memory the genome to be used as reference, which will have been prepared in advance. This step demands quite a lot of memory ~30 GB and thus STAR includes the --genomeLoad parameter (which takes several options), which (in principle) allows that the genome is loaded only for one of the multiple files to be mapped. 
+
+In Minerva, however, I recently experienced some memory-related issues when running multiple jobs using STAR in parallel. To note, my approach was submitting one job for each FASTQ file to be mapped with the chosen STAR parameters.
+
+In first place, while the memory is loaded into the shared memory of a given node, it may happen that jobs are assigned to a different node and thus are not able to *see* the loaded genome --although this will not prevent the job from running, it is not optimal because another copy of the genome needs to be loaded.
+
+Another more problematic issue is that unterminated jobs may leave their copies of loaded genomes in the shared memory. If we exceed the amount of shared memory we have as Minerva users, jobs will start failing due to lack of shared memory (it can be picked up from the log file).
+
+The best solution I found is using including the parameter --genomeLoad NoSharedMemory to make sure each jobs creates its own copy of the genome. This may not be optimal in terms of memory but, considering the vast memory memory resources available in Minerva and the high STAR mapping speed, it is a very practical solution...
+
+If you read the STAR manual you will see that NoSharedMemory is the default option of the --genomeLoad parameter. Well, we sort found that this is not how STAR behaves, at least in the STAR version installed in Minerva, so better include --genomeLoad NoSharedMemory in your scripts! 
 
 
 ## fastqc
