@@ -25,6 +25,31 @@ PS: and once you get too many shared memory segments, it is useful just to conta
 <br>
 
 
+## HTSeq
+
+If you can't find the HTSeq (http://www-huber.embl.de/users/anders/HTSeq/doc/overview.html) module in Minerva using:
+
+> module avail
+
+Try:
+
+> module load python py_packages
+
+<br>
+
+## RNASeQC
+
+Did you load the rnaseqc module with:
+
+>	module load rnaseqc
+
+but do not know how to call the actual executable java file? Try:
+
+> ls -l $RNASEQC_JAR
+
+<br>
+
+
 ## fastqc
 
 As many other tool, fastq is a module in Minerva and using it requires loading it:
