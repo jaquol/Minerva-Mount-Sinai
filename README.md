@@ -20,6 +20,8 @@ The best solution I found is using including the parameter --genomeLoad NoShared
 
 If you read the STAR manual you will see that NoSharedMemory is the default option of the --genomeLoad parameter. Well, we sort found that this is not how STAR behaves, at least in the STAR version installed in Minerva, so better include --genomeLoad NoSharedMemory in your scripts! 
 
+<br>
+
 
 ## fastqc
 
